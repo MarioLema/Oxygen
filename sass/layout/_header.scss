@@ -1,0 +1,56 @@
+.header {
+    height: 95vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+  .header .jumbotron-fluid {
+    height: 100%;
+    color: $color-white;
+  }
+  .header__logo-box {
+    position: absolute;
+  }
+  .header__logo {
+    height: 2rem;
+  }
+
+  
+  #discover-button {
+    border-radius: 5rem;
+    font-size: 1rem;
+    color: $color-grey-dark;
+    position: relative;
+    animation-name: moveButtonUp;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-out;
+    animation-delay: 600ms;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  
+  #discover-button::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 5rem;
+    background-color: $color-white;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 400ms;
+  }
+  #discover-button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
+  

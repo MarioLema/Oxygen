@@ -1,0 +1,38 @@
+.section-about{
+    background-color: $color-grey-light-1;
+    margin-top: -12rem;
+    padding: 20rem 0;
+}
+.section-about__content{
+    width: 100%;
+    max-width:1500px;
+    margin-bottom: 10rem;
+}
+.section-features{
+    padding: 20rem 0;
+    margin-top: -12rem;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/nat-4.jpg);
+    background-size: cover;
+    background-position: center;
+    transform: skewY(-7deg);
+
+}
+.section-features__container{
+    max-width:1500px;
+    width: 80%;
+    transform: skewY(7deg);
+}
+.section-tours{
+    background-color: $color-grey-light-1;
+    margin-top: -12rem;
+    padding: 20rem 0;
+}
+section-tours__cards-container{
+    max-width:1500px;
+    width: 80%;
+}
