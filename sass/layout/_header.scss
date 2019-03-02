@@ -20,37 +20,4 @@
   .header__logo {
     height: 2rem;
   }
-
-  
-  #discover-button {
-    border-radius: 5rem;
-    font-size: 1rem;
-    color: $color-grey-dark;
-    position: relative;
-    animation-name: moveButtonUp;
-    animation-duration: 1000ms;
-    animation-timing-function: ease-out;
-    animation-delay: 600ms;
-    animation-fill-mode: forwards;
-    opacity: 0;
-    transform: translateY(3rem);
-  }
-  
-  #discover-button::after {
-    content: "";
-    display: block;
-    height: 100%;
-    width: 100%;
-    border-radius: 5rem;
-    background-color: $color-white;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all 400ms;
-  }
-  #discover-button:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
-  }
   
