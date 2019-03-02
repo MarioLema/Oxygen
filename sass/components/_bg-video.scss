@@ -6,14 +6,12 @@
 	width: 100%;
 	z-index: -1;
 	opacity: .15;
-    overflow: hidden;
-    
-
+	overflow: hidden;
 }
 
 .bg-video__content {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
+	height: 100%;
+	width: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
 }

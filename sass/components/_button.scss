@@ -1,11 +1,16 @@
+
+//===============BTN SHADOW MODIFIER================
 .btn--shadow {
   transition: all 200ms;
   box-shadow: 0 10px 20px rgba($color-black, 0.2);
+
+  &:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba($color-black, 0.2);
+  }
 }
-.btn--shadow:active {
-  transform: translateY(1px);
-  box-shadow: 0 5px 10px rgba($color-black, 0.2);
-}
+
+//===============BTN WITH BOTTOM BORDER================
 .btn--bottom-border {
   &:link,
   &:visited {
@@ -28,7 +33,7 @@
   }
 }
 
-
+//===============BTN ANIMATED================
 .btn--round-animate {
   border-radius: 5rem !important;
   font-size: 1rem;
@@ -40,31 +45,36 @@
   animation-fill-mode: forwards;
   opacity: 0;
   transform: translateY(3rem);
+
+  &::after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 5rem;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 400ms;
+  }
+  &:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+  }
 }
 
-.btn--round-animate::after {
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  border-radius: 5rem;
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: all 400ms;
-}
-.btn--round-animate:hover::after {
-  transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
+//===============WHITE BTN================
 .btn--round-animate--white{
   color: $color-grey-dark;
+
+  &::after{
+    color: $color-white;
+    background-color: $color-white;
+  }
 }
-.btn--round-animate--white::after{
-  color: $color-white;
-  background-color: $color-white;
-}
+
+//===============GREEN BTN================
 .btn--round-animate--green{
   color: $color-white;
   background-color: $color-primary;
@@ -72,11 +82,13 @@
   &:hover{
     color: $color-white !important;
   }
+
+  &::after{
+    color: $color-white;
+    background-color: $color-primary;
+  }
 }
-.btn--round-animate--green::after{
-  color: $color-white;
-  background-color: $color-primary;
-}
+
 .btn--inline{
   display: inline-block;
 }

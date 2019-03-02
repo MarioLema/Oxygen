@@ -1,23 +1,23 @@
 .header {
-    height: 95vh;
-    background-image: linear-gradient(
-        to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)
-      ),
-      url(../img/hero.jpg);
-    background-size: cover;
-    background-position: center;
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-  }
-  .header .jumbotron-fluid {
-    height: 100%;
-    color: $color-white;
-  }
-  .header__logo-box {
-    position: absolute;
-  }
-  .header__logo {
-    height: 2rem;
-  }
-  
+  height: 95vh;
+  background-image: linear-gradient(to right bottom,
+    rgba($color-primary-light, 0.8),
+    rgba($color-primary-dark, 0.8)),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+}
+
+.header .jumbotron-fluid {
+  height: 100%;
+  color: $color-white;
+}
+
+.header__logo-box {
+  position: absolute;
+}
+
+.header__logo {
+  height: 2rem;
+}

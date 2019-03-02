@@ -1,3 +1,4 @@
+//===============FULL SCREEN CONTAINER================
 .popup {
     height: 100vh;
     width: 100%;
@@ -8,70 +9,80 @@
     z-index: 300;
     opacity: 0;
     visibility: hidden;
+    -webkit-transition: all 300ms;
     transition: all 300ms;
 
-    &:target{
+    &:target {
         opacity: 1;
         visibility: visible;
     }
 
-    &:target &__content{
-transform: scale(1);
-opacity: 1;
+    &:target .popup__content {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
     }
 
-    &__close{
-        &:link,
-        &:visited{
-            color: $color-grey-dark;
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            font-size: 2.5rem;
-            text-decoration: none;
-            transition: all 200ms;
-        }
+}
 
-        &:hover,
-        &:active{
-            color: $color-primary !important;
-        }
+//===============MESSAGE CONTAINER================
+.popup__content {
+    -webkit-box-shadow: 0 2rem 4rem rgba($color-black, 0.3);
+    box-shadow: 0 2rem 4rem rgba($color-black, 0.3);
+    overflow: hidden;
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+    -webkit-transition: all 400ms 200ms;
+    transition: all 400ms 200ms;
+}
+
+//===============CONTAINER SIDES================
+.popup__left {
+    max-height: 100%;
+    width: 33.3333333%;
+}
+
+.popup__right {
+    width: 66.666666%;
+}
+
+.popup__img {
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.popup__text {
+    -webkit-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 2rem;
+    column-gap: 2rem;
+    -webkit-column-rule: 1px solid $color-grey-light-2;
+    column-rule: 1px solid $color-grey-light-2;
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+//===============CLOSE BUTTON================
+.popup__close {
+
+    &:link,
+    &:visited {
+        color: $color-grey-dark;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 2.5rem;
+        text-decoration: none;
+        -webkit-transition: all 200ms;
+        transition: all 200ms;
     }
 
-    &__content {
-        -webkit-box-shadow: 0 2rem 4rem rgba($color-black, 0.3);
-                box-shadow: 0 2rem 4rem rgba($color-black, 0.3);
-        overflow: hidden;
-        transform: scale(0.5);
-        opacity: 0;
-        transition: all 400ms 200ms;
-    }
-
-
-    &__left {
-        max-height: 100%;
-        width: 33.3333333%;
-    }
-
-    &__right {
-        width: 66.666666%;
-    }
-
-    &__img {
-        width: 100%;
-        object-fit: cover;
-    }
-
-    &__text {
-        -webkit-column-count: 2;
-                column-count: 2;
-        -webkit-column-gap: 2rem;
-                column-gap: 2rem;
-        -webkit-column-rule: 1px solid $color-grey-light-2;
-                column-rule: 1px solid $color-grey-light-2;
-        text-align: justify;
-        -webkit-hyphens: auto;
-            -ms-hyphens: auto;
-                hyphens: auto;
+    &:hover,
+    &:active {
+        color: $color-primary !important;
     }
 }

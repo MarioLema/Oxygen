@@ -1,29 +1,27 @@
-.footer{
+.footer {
     background-color: $color-grey-dark-3;
     position: relative;
+}
 
-    // &__logo-box{
-    // }
+.footer__logo {
+    width: 4rem;
+}
 
-    &__logo{
-        width: 4rem;
+.footer__list {
+    list-style: none;
+    border-top: solid 1px rgba($color-grey-light-2, 0.4);
+}
+
+.footer__link {
+
+    &:link,
+    &:visited {
+        color: $color-grey-light-1;
+        text-decoration: none;
     }
-    &__list{
-list-style: none;
-border-top: solid 1px rgba($color-grey-light-2,0.4);
-    }
-    // &__item{
 
-    // }
-    &__link{
-        &:link,
-        &:visited{
-            color: $color-grey-light-1;
-            text-decoration: none;
-        }
-        &:hover,
-        &:active{
-            color: $color-primary !important;
-        }
+    &:hover,
+    &:active {
+        color: $color-primary !important;
     }
 }

@@ -1,56 +1,66 @@
+
+//===============BODY FONT SETUP================
 body {
-    font-family: "Lato", sans-serif !important;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.7;
-    color: $color-grey-dark !important;
-  }
+  font-family: "Lato", sans-serif !important;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: $color-grey-dark !important;
+}
 
-
+//===============MAIN HEADER================
 .header__title {
-    font-weight: 400;
-    letter-spacing: 1rem;
-    animation-name: moveInLeft;
-    animation-duration: 1500ms;
-    animation-timing-function: ease-out;
-    animation-delay: 400ms;
-    animation-fill-mode: forwards;
-    opacity: 0;
-    transform: translateX(-8rem);
-  }
-  .header__title--sub {
-    font-weight: 700;
-    letter-spacing: 0.5rem;
-    animation-name: moveInRight;
-    animation-duration: 1500ms;
-    animation-timing-function: ease-out;
-    animation-delay: 400ms;
-    animation-fill-mode: forwards;
-    opacity: 0;
-    transform: translateX(8rem);
-  }
-.heading-secondary{
-background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
--webkit-background-clip: text;
-background-clip: text;
-color: transparent;
-letter-spacing: 0.2rem;
-text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
-transition: all 2000ms;
-margin-bottom: 2rem;
+  font-weight: 400;
+  letter-spacing: 1rem;
+  animation-name: moveInLeft;
+  animation-duration: 1500ms;
+  animation-timing-function: ease-out;
+  animation-delay: 400ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateX(-8rem);
 }
- .heading-secondary:hover{
-   background-size: 150%;
-   cursor: context-menu;
+
+.header__title--sub {
+  font-weight: 700;
+  letter-spacing: 0.5rem;
+  animation-name: moveInRight;
+  animation-duration: 1500ms;
+  animation-timing-function: ease-out;
+  animation-delay: 400ms;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateX(8rem);
+}
+
+//===============SECONDARY CLIPPED BACKGROUND HEADERS================
+.heading-secondary {
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
+  transition: all 2000ms;
+  margin-bottom: 3rem;
+}
+
+.heading-secondary:hover {
+  background-size: 150%;
+  cursor: context-menu;
 
 }
-#heading-secondary--form{
+
+#heading-secondary--form {
   margin-bottom: 0;
 }
-.heading-tertiary{
- font-weight: 700;
- font-size: 1.3rem;
+
+//===============TERTIARY GREY HEADINGS================
+.heading-tertiary {
+  font-weight: 700;
+  font-size: 1.3rem;
 }
-.feature-box__text{
+
+.feature-box__text {
   font-size: 1.1rem;
 }
