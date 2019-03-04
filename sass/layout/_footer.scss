@@ -4,10 +4,16 @@
 }
 
 .footer__logo {
-    width: 4rem;
+    width: 2rem;
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
 }
 
 .footer__list {
+    width:calc(50% - 3rem);
+    max-width: 500px;
     list-style: none;
     border-top: solid 1px rgba($color-grey-light-2, 0.4);
 }
@@ -24,4 +30,9 @@
     &:active {
         color: $color-primary !important;
     }
+}
+
+.footer__copyright{
+    width: calc(50% - 3rem);
+    max-width: 500px;
 }

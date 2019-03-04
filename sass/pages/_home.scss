@@ -17,19 +17,19 @@
     padding: 20rem 0;
     margin-top: -12rem;
     background-image: linear-gradient(to right bottom,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)),
-        url(../img/nat-4.jpg);
+        rgba($color-primary-light, 0.6),
+        rgba($color-primary-dark, 0.6)),
+        url(../images/parachute-2.jpg);
     background-size: cover;
     background-position: center;
-    transform: skewY(-7deg);
+    transform: skewY(-4deg);
 
 }
 
 .section-features__container {
     max-width: 1500px;
     width: 80%;
-    transform: skewY(7deg);
+    transform: skewY(4deg);
 }
 
 //===============TOURS SECTION================
@@ -49,28 +49,35 @@
 .section-stories {
     padding: 10rem 0;
     position: relative;
+    background-image: linear-gradient(to right bottom,
+    rgba($color-primary-light, 0.9),
+    rgba($color-white, 0.9)),
+    url(../images/nat-1.jpg);
+    background-size: cover;
+    background-position: left;
 }
 
 //===============BOOK SECTION================
-.section-book {
-    padding: 10rem 0;
+.section-book { 
+    padding: 10rem;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+
 }
 
 .book {
-    background-image: linear-gradient(105deg, rgba($color-white, 0.9) 0%,
-        rgba($color-white, 0.9) 50%,
-        transparent 50%), url(../img/nat-10.jpg);
     background-size: cover;
     height: 30rem;
-    max-width: 1200px;
-    width: 80%;
-    margin: 0 auto;
     box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
+    position:relative;
 
     &__form {
-        width: 50%;
+        width: 100%;
         height: 100%;
         padding: 3rem;
+        position: absolute;
+        z-index: 200;
+        background-image: linear-gradient(105deg, rgba($color-yellow-white, 0.7) 0%,
+        rgba($color-white, 0.7) 50%,
+        transparent 50%);
     }
 }

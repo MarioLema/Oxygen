@@ -29,9 +29,9 @@
 
 //===============NAVIGATION ELEMENTS================
 .navigation__button {
-    background-color: $color-white;
-    height: 5rem;
-    width: 5rem;
+    background-color: $color-yellow-white;
+    height: 3rem;
+    width: 3rem;
     position: fixed;
     top: 3rem;
     right: 3rem;
@@ -50,8 +50,8 @@
 }
 
 .navigation__background {
-    height: 4rem;
-    width: 4rem;
+    height: 2rem;
+    width: 2rem;
     border-radius: 50%;
     position: fixed;
     top: 3.5rem;
@@ -78,7 +78,7 @@
     &,
     &::before,
     &::after {
-        width: 2rem;
+        width: 1rem;
         height: 2px;
         background-color: $color-grey-dark-3;
         display: inline-block;
