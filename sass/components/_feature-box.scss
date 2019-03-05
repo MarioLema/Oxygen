@@ -9,7 +9,7 @@
     transform: translateY(-1rem) scale(1.03);
   }
 
-  @include responsive(small) {
+  @include responsive(giant) {
     &{
       margin: 0;
     }

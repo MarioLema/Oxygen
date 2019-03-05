@@ -7,8 +7,13 @@
 
   @include responsive(small) {
     &{
-      height: 100%;
-      min-height: 0;
+      min-height: 20rem;
+    }
+  }
+
+  @include responsive(medium) {
+    &{
+      min-height: 23rem;
       margin-top: 0;
     }
   }
@@ -28,9 +33,9 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.6);
   }
 
-  @include responsive(small) {
+  @include responsive(medium) {
     &{
-      width: 55%;
+      width: 70%;
     }
   }
 }
@@ -38,8 +43,13 @@
 .composition__image--p1 {
   top: 0;
   left: 0;
-
-  @include responsive(small) {
+  @include responsive(medium) {
+    &{
+      top: 0;
+      left: 0;
+    }
+  }
+  @include responsive(giant) {
     &{
       top: -5%;
       left: 0px;
@@ -50,10 +60,23 @@
 .composition__image--p2 {
   right: 0;
   top: -5%;
-  @include responsive(small) {
+
+
+  @include responsive(medium) {
+    &{
+      right: 0;
+      top: 25%;
+    }
+  }
+  @include responsive(medium) {
     &{
       right: 10%;
-      bottom: 10%;
+    }
+  }
+  @include responsive(giant) {
+    &{
+      right: 0;
+      top: 15%;
     }
   }
 }
@@ -61,10 +84,24 @@
 .composition__image--p3 {
   top: 10%;
   left: 30%;
-  @include responsive(small) {
+
+
+  @include responsive(medium) {
     &{
-      bottom: -20%;
-      right: 35%;
+      top: 40%;
+      left: 0;
+    }
+  }
+  @include responsive(large) {
+    &{
+top: 56%;
+    }
+  }
+
+  @include responsive(giant) {
+    &{
+      left: 10%;
+      top: 50%;
     }
   }
 }

@@ -10,7 +10,7 @@
 
 
 
-  @include responsive(small) {
+  @include responsive(medium) {
     &{
       height: 90vh;
       clip-path: polygon(0 0, 100% 0, 100% 80vh,60% 80vh,50% 90vh,40% 80vh, 0 80vh);

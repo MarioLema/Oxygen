@@ -16,8 +16,30 @@
 
 .section-about__content {
     width: 100%;
-    max-width: 1500px;
+    max-width: 32rem;
     margin-bottom: 10rem;
+
+    @include responsive(small) {
+        &{
+            margin-bottom: 0;
+            max-width: 34rem;
+        }
+      }
+      @include responsive(medium) {
+        &{
+            max-width: 46rem;
+        }
+      }
+      @include responsive(large) {
+        &{
+            max-width: 60rem;
+        }
+      }
+      @include responsive(giant) {
+        &{
+            max-width: 73rem;
+        }
+      }
 }
 
 //===============FEATURES SECTION================
@@ -32,23 +54,28 @@
     background-position: center;
     transform: skewY(-15deg);
 
-    @include responsive(small) {
+    @include responsive(large) {
+        &{
+            transform: skewY(-4deg);
+        }
+      }
+      @include responsive(giant) {
         &{
             padding: 20rem 0;
-            transform: skewY(-4deg);
         }
       }
 
 }
 
 .section-features__container {
-    max-width: 1500px;
+    max-width: 1300px;
     width: 80%;
     transform: skewY(15deg);
 
-    @include responsive(small) {
+    @include responsive(large) {
         &{
             transform: skewY(4deg);
+            width: 100%;
         }
       }
 }
@@ -59,7 +86,7 @@
     margin-top: -12rem;
     padding: 20rem 0 10rem 0;
 
-    @include responsive(small) {
+    @include responsive(giant) {
         &{
             padding: 20rem 0;
         }
@@ -67,14 +94,19 @@
 }
 
 .section-tours__cards-container {
-    max-width: 1500px;
+    max-width: 1300px;
     width: 90%;
     margin-bottom: 5rem;
 
-    @include responsive(small) {
+    @include responsive(medium) {
         &{
             width: 80%;
             margin-bottom: 10rem;
+        }
+      }
+      @include responsive(large) {
+        &{
+            width: 100%;
         }
       }
 }
@@ -110,11 +142,20 @@
         height: 100%;
         padding: 1.5rem;
         position: absolute;
-        z-index: 200;
+        z-index: 2;
         background-color: rgba($color-yellow-white, 0.7);
 
         @include responsive(small) {
             &{
+                background-color: transparent;
+                background-image: linear-gradient(105deg, rgba($color-yellow-white, 0.7) 0%,
+                rgba($color-yellow-white, 0.7) 75%,
+                transparent 75%);
+            }
+          }
+          @include responsive(large) {
+            &{
+                background-color: transparent;
                 background-image: linear-gradient(105deg, rgba($color-yellow-white, 0.7) 0%,
                 rgba($color-yellow-white, 0.7) 50%,
                 transparent 50%);

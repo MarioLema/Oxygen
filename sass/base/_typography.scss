@@ -26,6 +26,12 @@ body {
   transform: translateX(-8rem);
   color: $color-yellow-white;
   font-size: 1.5rem;
+
+    @include responsive(small) {
+    &{
+      font-size:2.5rem ;
+    }
+  }
 }
 .header__title__span{
   opacity: 0.7;
@@ -44,6 +50,12 @@ body {
   color: $color-yellow-white;
   font-size: 1rem;
   font-weight: 300;
+
+  @include responsive(small) {
+    &{
+      font-size: inherit;
+    }
+  }
 }
 
 //===============SECONDARY CLIPPED BACKGROUND HEADERS================
@@ -59,7 +71,7 @@ body {
   font-size: 1.3rem;
   text-align: center;
 
-  @include responsive(small) {
+  @include responsive(medium) {
     &{
       font-size: 2rem;
     }
@@ -81,7 +93,7 @@ body {
   font-weight: 700;
   font-size: 1rem;
 
-  @include responsive(small) {
+  @include responsive(medium) {
     &{
       font-size: 1.3rem;
     }

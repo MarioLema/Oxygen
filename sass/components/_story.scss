@@ -1,5 +1,5 @@
 .story {
-    max-width: 1000px;
+    max-width: 30rem;
     box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
     background-color: rgba($color-yellow-white, 0.6);
     padding: 2rem;
@@ -18,11 +18,25 @@
 
     }
 
-    @include responsive(small){
+    @include responsive(medium){
         &{
             transform: skewX(-12deg);
+            max-width: 40rem;
+        }
+
+    }
+    @include responsive(large){
+        &{
+            max-width: 50rem;
+            padding-left: -2rem;
+        }
+
+    }
+    @include responsive(giant){
+        &{
             padding: 4rem;
             padding-left: 5rem;
+            max-width: 62.5rem;
         }
 
     }
@@ -32,21 +46,19 @@
     width: 7rem;
     height: 7rem;
     float: left;
-    -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
-    -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
     transform: translateX(-1rem);
     position: relative;
 
-    @include responsive(small){
+    @include responsive(medium){
         &{
-            transform: skewX(12deg);
+            transform: skewX(12deg) translateX(-1rem);
         }
 
     }
 
-    @include responsive(small){
+    @include responsive(large){
         &{
             width: 10rem;
             height: 10rem;
@@ -64,7 +76,7 @@
 }
 
 .story__text {
-    @include responsive(small){
+    @include responsive(medium){
         &{
             transform: skewX(12deg);
         }
