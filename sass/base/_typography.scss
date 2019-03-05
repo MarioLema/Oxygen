@@ -1,4 +1,3 @@
-
 //===============BODY FONT SETUP================
 body {
   font-family: "Lato", sans-serif !important;
@@ -6,8 +5,9 @@ body {
 
   line-height: 1.7;
   color: $color-grey-dark !important;
+
   @include responsive(small) {
-    &{
+    & {
       font-size: 1rem;
     }
   }
@@ -27,13 +27,14 @@ body {
   color: $color-yellow-white;
   font-size: 1.5rem;
 
-    @include responsive(small) {
-    &{
-      font-size:2.5rem ;
+  @include responsive(small) {
+    & {
+      font-size: 2.5rem;
     }
   }
 }
-.header__title__span{
+
+.header__title__span {
   opacity: 0.7;
 }
 
@@ -52,7 +53,7 @@ body {
   font-weight: 300;
 
   @include responsive(small) {
-    &{
+    & {
       font-size: inherit;
     }
   }
@@ -60,10 +61,7 @@ body {
 
 //===============SECONDARY CLIPPED BACKGROUND HEADERS================
 .heading-secondary {
-  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: $color-primary;
   letter-spacing: 0.2rem;
   text-shadow: 0.5rem 1rem 2rem rgba($color-black, 0.2);
   transition: all 2000ms;
@@ -72,8 +70,17 @@ body {
   text-align: center;
 
   @include responsive(medium) {
-    &{
+    & {
       font-size: 2rem;
+    }
+  }
+
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    & {
+      background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
   }
 }
@@ -94,7 +101,7 @@ body {
   font-size: 1rem;
 
   @include responsive(medium) {
-    &{
+    & {
       font-size: 1.3rem;
     }
   }

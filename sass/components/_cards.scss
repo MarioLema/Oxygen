@@ -3,40 +3,77 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
-    height: 40rem;
     width: 100%;
     background: none !important;
     margin: auto;
 
-    &:hover &__side--front {
-        //.card:hover .card__side--front
-        transform: rotateY(-180deg);
+
+
+
+
+    @media(hover: hover) {
+        @supports (backface-visibility: hidden) or (-webkit-backface-visibility: hidden) {
+            & {
+                height: 40rem;
+            }
+        }
+
+        &:hover &__side--front {
+
+            //.card:hover .card__side--front
+            @supports (backface-visibility: hidden) or (-webkit-backface-visibility: hidden) {
+                transform: rotateY(-180deg);
+            }
+        }
+
+        &:hover &__side--back {
+
+            //.card:hover .card__side--back
+            @supports (backface-visibility: hidden) or (-webkit-backface-visibility: hidden) {
+                transform: rotateY(0deg);
+            }
+        }
     }
 
-    &:hover &__side--back {
-        //.card:hover .card__side--back
-        transform: rotateY(0deg);
-    }
+
 
 
     @include responsive(small) {
-        &{
+        & {
             width: 25rem;
         }
-      }
+    }
+}
+
+.card:last-of-type {
+    @include responsive(small) {
+
+        @supports (display: grid) {
+            grid-column: 1/-1;
+        }
+    }
 }
 
 //===============CARD SIDES================
 .card__side {
-    height: 40rem;
+
     transition: all 800ms ease;
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    backface-visibility: hidden;
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     overflow: hidden;
+
+    @media (hover: hover) {
+        @supports (backface-visibility: hidden) or (-webkit-backface-visibility: hidden) {
+            & {
+                height: 40rem;
+                top: 0;
+                left: 0;
+                position: absolute;
+                backface-visibility: hidden;
+            }
+        }
+    }
+
 }
 
 .card__side--front {
@@ -44,7 +81,18 @@
 }
 
 .card__side--back {
-    transform: rotateY(180deg);
+    padding: 1rem;
+    margin-top: 2rem;
+
+    @media (hover: hover) {
+        @supports (backface-visibility: hidden) or (-webkit-backface-visibility: hidden) {
+            & {
+                transform: rotateY(180deg);
+                padding: 0;
+                margin-top: 0;
+            }
+        }
+    }
 }
 
 .card__side--back--1 {
@@ -64,44 +112,76 @@
     background-size: cover;
     background-blend-mode: screen;
     height: 18rem;
-    clip-path: polygon(0 0, 100% 0, 100% 80%,60% 80%,50% 90%,40% 80%, 0 80%);
+    margin-bottom: 1rem;
+
+    @supports (clip-path: polygon(0 0, 100% 0, 100% 80%, 60% 80%, 50% 90%, 40% 80%, 0 80%)) or (-webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 60% 80%, 50% 90%, 40% 80%, 0 80%)) {
+        & {
+            margin-bottom: 0px;
+            clip-path: polygon(0 0, 100% 0, 100% 80%, 60% 80%, 50% 90%, 40% 80%, 0 80%);
+        }
+    }
 }
 
 .card__picture--1 {
-    background-image: linear-gradient(to right bottom, rgba($color-secondary-light,0.6), rgba($color-secondary-dark,0.6)), url(../images/parachute-4.jpg);
+    background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.6), rgba($color-secondary-dark, 0.6)), url(../images/parachute-1-md.jpg);
 }
 
 .card__picture--2 {
-    background-image: linear-gradient(to right bottom, rgba($color-primary-light,0.6), rgba($color-primary-dark,0.6)), url(../images/dive-3.jpg);
+    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.6), rgba($color-primary-dark, 0.6)), url(../images/dive-1-md.jpg);
 }
 
 .card__picture--3 {
-    background-image: linear-gradient(to right bottom, rgba($color-tertiary-light,0.6), rgba($color-tertiary-dark,0.6)), url(../images/space-2.jpg);
+    background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.6), rgba($color-tertiary-dark, 0.6)), url(../images/space-1-md.jpg);
 }
 
 //===============CARD HEADINGS================
 .card__heading {
-	font-size: 2.5rem;
-	font-weight: 300;
-	color: transparent;
-	background-clip: text;
-	width: 75%;
-	margin: auto;
+    font-size: 2.5rem;
+    font-weight: 300;
+    width: 75%;
+    margin: auto;
+
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+        & {
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    }
+
 }
 
 .card__heading--1 {
-    background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.85), rgba($color-secondary-dark, 0.85));
+    color: $color-secondary-dark;
     border-bottom: solid $color-secondary-dark 4px;
+
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+        & {
+            background-image: linear-gradient(to right bottom, rgba($color-secondary-light, 0.85), rgba($color-secondary-dark, 0.85));
+        }
+    }
 }
 
 .card__heading--2 {
-    background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.85), rgba($color-primary-dark, 0.85));
+    color: $color-primary-dark;
     border-bottom: solid $color-primary 4px;
+
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+        & {
+            background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.85), rgba($color-primary-dark, 0.85));
+        }
+    }
 }
 
 .card__heading--3 {
-    background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.85), rgba($color-tertiary-dark, 0.85));
+    color: $color-tertiary-dark;
     border-bottom: solid $color-tertiary-dark 4px;
+
+    @supports (background-clip: text) or (-webkit-background-clip: text) {
+        & {
+            background-image: linear-gradient(to right bottom, rgba($color-tertiary-light, 0.85), rgba($color-tertiary-dark, 0.85));
+        }
+    }
 }
 
 //===============CARD SMALL EDITING================

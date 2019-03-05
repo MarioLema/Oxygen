@@ -18,22 +18,24 @@
 
     }
 
-    @include responsive(medium){
-        &{
+    @include responsive(medium) {
+        & {
             transform: skewX(-12deg);
             max-width: 40rem;
         }
 
     }
-    @include responsive(large){
-        &{
+
+    @include responsive(large) {
+        & {
             max-width: 50rem;
             padding-left: -2rem;
         }
 
     }
-    @include responsive(giant){
-        &{
+
+    @include responsive(giant) {
+        & {
             padding: 4rem;
             padding-left: 5rem;
             max-width: 62.5rem;
@@ -46,20 +48,27 @@
     width: 7rem;
     height: 7rem;
     float: left;
-    shape-outside: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
     transform: translateX(-1rem);
     position: relative;
+    border-radius: 100%;
+    overflow: hidden;
 
-    @include responsive(medium){
-        &{
+    @supports (clip-path: circle(50% at 50% 50%)) and (shape-outside: circle(50% at 50% 50%)) {
+        & {
+            shape-outside: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+        }
+    }
+
+    @include responsive(medium) {
+        & {
             transform: skewX(12deg) translateX(-1rem);
         }
 
     }
 
-    @include responsive(large){
-        &{
+    @include responsive(large) {
+        & {
             width: 10rem;
             height: 10rem;
         }
@@ -76,8 +85,8 @@
 }
 
 .story__text {
-    @include responsive(medium){
-        &{
+    @include responsive(medium) {
+        & {
             transform: skewX(12deg);
         }
 

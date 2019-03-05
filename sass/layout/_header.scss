@@ -1,21 +1,45 @@
 .header {
-  height: 70vh;
+  height: 100vh;
   background-image: linear-gradient(to right bottom,
     rgba($color-primary-light, 0.7),
     rgba($color-primary-dark, 0.7)),
-    url(../images/nat-2.jpg);
+    url(../images/nat-1-sm.jpg);
   background-size: cover;
   background-position: center;
-  clip-path: polygon(0 0, 100% 0, 100% 65vh,60% 65vh,50% 70vh,40% 65vh, 0 65vh);
 
-
-
-  @include responsive(medium) {
-    &{
-      height: 90vh;
-      clip-path: polygon(0 0, 100% 0, 100% 80vh,60% 80vh,50% 90vh,40% 80vh, 0 80vh);
+  @supports (clip-path: polygon(0 0, 100% 0, 100% 65vh, 60% 65vh, 50% 70vh, 40% 65vh, 0 65vh)) or (-webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 60% 65vh, 50% 70vh, 40% 65vh, 0 65vh)) {
+    & {
+      height: 70vh;
+      clip-path: polygon(0 0, 100% 0, 100% 65vh, 60% 65vh, 50% 70vh, 40% 65vh, 0 65vh);
     }
   }
+
+  @include responsive(medium) {
+    & {
+      height: 90vh;
+      background-image: linear-gradient(to right bottom,
+        rgba($color-primary-light, 0.7),
+        rgba($color-primary-dark, 0.7)),
+        url(../images/nat-1-lg.jpg);
+    }
+
+    @supports (clip-path: polygon(0 0, 100% 0, 100% 65vh, 60% 65vh, 50% 70vh, 40% 65vh, 0 65vh)) or (-webkit-clip-path: polygon(0 0, 100% 0, 100% 65vh, 60% 65vh, 50% 70vh, 40% 65vh, 0 65vh)) {
+      & {
+        height: 90vh;
+        clip-path: polygon(0 0, 100% 0, 100% 80vh, 60% 80vh, 50% 90vh, 40% 80vh, 0 80vh);
+      }
+    }
+  }
+
+  @include responsive(large) {
+    & {
+      background-image: linear-gradient(to right bottom,
+        rgba($color-primary-light, 0.7),
+        rgba($color-primary-dark, 0.7)),
+        url(../images/nat-1-xl.jpg);
+    }
+  }
+
 
 }
 
@@ -24,17 +48,17 @@
 }
 
 .header__logo-box {
-	position: absolute;
-	top: 0;
-	left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .header__logo {
-	height: 3rem;
+  height: 3rem;
   opacity: 0.8;
-  
+
   @include responsive(small) {
-    &{
+    & {
       height: 4rem;
     }
   }

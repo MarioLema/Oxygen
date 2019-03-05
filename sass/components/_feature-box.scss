@@ -10,7 +10,7 @@
   }
 
   @include responsive(giant) {
-    &{
+    & {
       margin: 0;
     }
   }
@@ -18,14 +18,20 @@
 
 .feature-box__icon {
   font-size: 2rem;
-  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: $color-primary-dark;
 
   @include responsive(small) {
-    &{
+    & {
       font-size: 4rem;
+    }
+  }
+
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    & {
+      background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
     }
   }
 }

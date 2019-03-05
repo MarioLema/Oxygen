@@ -6,13 +6,13 @@
   margin-top: 3rem;
 
   @include responsive(small) {
-    &{
+    & {
       min-height: 20rem;
     }
   }
 
   @include responsive(medium) {
-    &{
+    & {
       min-height: 23rem;
       margin-top: 0;
     }
@@ -34,7 +34,7 @@
   }
 
   @include responsive(medium) {
-    &{
+    & {
       width: 70%;
     }
   }
@@ -43,14 +43,16 @@
 .composition__image--p1 {
   top: 0;
   left: 0;
+
   @include responsive(medium) {
-    &{
+    & {
       top: 0;
       left: 0;
     }
   }
+
   @include responsive(giant) {
-    &{
+    & {
       top: -5%;
       left: 0px;
     }
@@ -63,18 +65,20 @@
 
 
   @include responsive(medium) {
-    &{
+    & {
       right: 0;
       top: 25%;
     }
   }
+
   @include responsive(medium) {
-    &{
+    & {
       right: 10%;
     }
   }
+
   @include responsive(giant) {
-    &{
+    & {
       right: 0;
       top: 15%;
     }
@@ -87,19 +91,20 @@
 
 
   @include responsive(medium) {
-    &{
+    & {
       top: 40%;
       left: 0;
     }
   }
+
   @include responsive(large) {
-    &{
-top: 56%;
+    & {
+      top: 56%;
     }
   }
 
   @include responsive(giant) {
-    &{
+    & {
       left: 10%;
       top: 50%;
     }
