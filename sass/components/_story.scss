@@ -2,9 +2,7 @@
     max-width: 1000px;
     box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
     background-color: rgba($color-yellow-white, 0.6);
-    transform: skewX(-12deg);
-    padding: 4rem;
-    padding-left: 5rem;
+    padding: 2rem;
     margin-bottom: 5rem;
 
     &:hover &__caption {
@@ -19,18 +17,43 @@
         transform: translateX(-2.5rem) scale(1);
 
     }
+
+    @include responsive(small){
+        &{
+            transform: skewX(-12deg);
+            padding: 4rem;
+            padding-left: 5rem;
+        }
+
+    }
 }
 
 .story__shape {
-    width: 10rem;
-    height: 10rem;
+    width: 7rem;
+    height: 7rem;
     float: left;
     -webkit-shape-outside: circle(50% at 50% 50%);
     shape-outside: circle(50% at 50% 50%);
     -webkit-clip-path: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translateX(-1rem) skewX(12deg);
+    transform: translateX(-1rem);
     position: relative;
+
+    @include responsive(small){
+        &{
+            transform: skewX(12deg);
+        }
+
+    }
+
+    @include responsive(small){
+        &{
+            width: 10rem;
+            height: 10rem;
+        }
+
+    }
+
 }
 
 .story__img {
@@ -41,7 +64,12 @@
 }
 
 .story__text {
-    transform: skewX(12deg);
+    @include responsive(small){
+        &{
+            transform: skewX(12deg);
+        }
+
+    }
 }
 
 

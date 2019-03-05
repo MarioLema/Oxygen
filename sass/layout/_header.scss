@@ -1,13 +1,22 @@
 .header {
-  height: 90vh;
+  height: 70vh;
   background-image: linear-gradient(to right bottom,
     rgba($color-primary-light, 0.7),
     rgba($color-primary-dark, 0.7)),
     url(../images/nat-2.jpg);
   background-size: cover;
   background-position: center;
-  clip-path: polygon(0 0, 100% 0, 100% 80vh,60% 80vh,50% 90vh,40% 80vh, 0 80vh);
-  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.62);
+  clip-path: polygon(0 0, 100% 0, 100% 65vh,60% 65vh,50% 70vh,40% 65vh, 0 65vh);
+
+
+
+  @include responsive(small) {
+    &{
+      height: 90vh;
+      clip-path: polygon(0 0, 100% 0, 100% 80vh,60% 80vh,50% 90vh,40% 80vh, 0 80vh);
+    }
+  }
+
 }
 
 .header .container {
@@ -21,6 +30,12 @@
 }
 
 .header__logo {
-	height: 4rem;
-	opacity: 0.8;
+	height: 3rem;
+  opacity: 0.8;
+  
+  @include responsive(small) {
+    &{
+      height: 4rem;
+    }
+  }
 }

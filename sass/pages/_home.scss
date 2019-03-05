@@ -2,8 +2,16 @@
 //===============ABOUT SECTION================
 .section-about {
     background-color: $color-grey-light-1;
-    margin-top: -12rem;
-    padding: 20rem 0;
+    margin-top: -5rem;
+    padding: 8rem 0;
+
+
+    @include responsive(small) {
+        &{
+            padding: 20rem 0;
+            margin-top: -12rem;
+        }
+      }
 }
 
 .section-about__content {
@@ -14,7 +22,7 @@
 
 //===============FEATURES SECTION================
 .section-features {
-    padding: 20rem 0;
+    padding: 10rem 0;
     margin-top: -12rem;
     background-image: linear-gradient(to right bottom,
         rgba($color-primary-light, 0.6),
@@ -22,27 +30,53 @@
         url(../images/parachute-2.jpg);
     background-size: cover;
     background-position: center;
-    transform: skewY(-4deg);
+    transform: skewY(-15deg);
+
+    @include responsive(small) {
+        &{
+            padding: 20rem 0;
+            transform: skewY(-4deg);
+        }
+      }
 
 }
 
 .section-features__container {
     max-width: 1500px;
     width: 80%;
-    transform: skewY(4deg);
+    transform: skewY(15deg);
+
+    @include responsive(small) {
+        &{
+            transform: skewY(4deg);
+        }
+      }
 }
 
 //===============TOURS SECTION================
 .section-tours {
     background-color: $color-grey-light-1;
     margin-top: -12rem;
-    padding: 20rem 0;
+    padding: 20rem 0 10rem 0;
+
+    @include responsive(small) {
+        &{
+            padding: 20rem 0;
+        }
+      }
 }
 
 .section-tours__cards-container {
     max-width: 1500px;
-    width: 80%;
-    margin-bottom: 10rem;
+    width: 90%;
+    margin-bottom: 5rem;
+
+    @include responsive(small) {
+        &{
+            width: 80%;
+            margin-bottom: 10rem;
+        }
+      }
 }
 
 //===============STORIES SECTION================
@@ -69,15 +103,27 @@
     height: 30rem;
     box-shadow: 0 1.5rem 3rem rgba($color-black, 0.2);
     position:relative;
+    background-image: url(../images/trees.jpg);
 
     &__form {
         width: 100%;
         height: 100%;
-        padding: 3rem;
+        padding: 1.5rem;
         position: absolute;
         z-index: 200;
-        background-image: linear-gradient(105deg, rgba($color-yellow-white, 0.7) 0%,
-        rgba($color-white, 0.7) 50%,
-        transparent 50%);
+        background-color: rgba($color-yellow-white, 0.7);
+
+        @include responsive(small) {
+            &{
+                background-image: linear-gradient(105deg, rgba($color-yellow-white, 0.7) 0%,
+                rgba($color-yellow-white, 0.7) 50%,
+                transparent 50%);
+            }
+          }
     }
+    @include responsive(small) {
+        &{
+            padding: 3rem;
+        }
+      }
 }

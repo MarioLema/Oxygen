@@ -8,4 +8,27 @@
 a:hover {
   color: $color-grey-dark  !important;
 }
+body{
+width: 100vw;
 
+  @include responsive(small) {
+    &{
+      background: red;
+    }
+  }
+  @include responsive(medium) {
+    &{
+      background: green;
+    }
+  }
+  @include responsive(large) {
+    &{
+      background: yellow;
+    }
+  }
+  @include responsive(giant) {
+    &{
+      background: blue;
+    }
+  }
+}

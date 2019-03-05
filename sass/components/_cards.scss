@@ -4,7 +4,7 @@
     -moz-perspective: 150rem;
     position: relative;
     height: 40rem;
-    width: 25rem;
+    width: 100%;
     background: none !important;
 
     &:hover &__side--front {
@@ -16,6 +16,13 @@
         //.card:hover .card__side--back
         transform: rotateY(0deg);
     }
+
+
+    @include responsive(small) {
+        &{
+            width: 25rem;
+        }
+      }
 }
 
 //===============CARD SIDES================

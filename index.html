@@ -31,7 +31,7 @@
 
 <body>
     <!-- ===============NAVIGATION MENU================ -->
-    <div class="navigation">
+    <!-- <div class="navigation">
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
         <label for="navi-toggle" class="navigation__button d-flex align-items-center justify-content-center">
             <span class="navigation__icon">&nbsp</span>
@@ -51,7 +51,7 @@
                         naturous</a></li>
             </ul>
         </nav>
-    </div>
+    </div> -->
     <!-- ===============HEADER================ -->
     <header class="header d-flex align-items-center">
         <div class="header__logo-box m-3">
@@ -59,14 +59,14 @@
         </div>
 
         <div class="container text-center">
-            <h1 class="header__title display-4 mb-0">FRESH<span class="header__title__span">▿</span>AIR</h1>
+            <h1 class="header__title display-sm-4 mb-0">FRESH<span class="header__title__span">▿</span>AIR</h1>
 
-            <p class="header__title--sub lead display-5 mb-5">
+            <p class="header__title--sub display-5 mb-5">
 MAKING LIFE POSSIBLE
             </p>
 
             <a class="btn btn--shadow btn--round-animate btn--round-animate--white
-                    btn-lg bg-white border-0 py-2 px-4"
+                    btn-sm-lg bg-white border-0 py-2 px-4"
                 href="#section-tours" role="button">
                 REDISCOVER  THE AIR
             </a>
@@ -77,12 +77,12 @@ MAKING LIFE POSSIBLE
         <!-- ===============ABOUT SECTION================ -->
         <section class="section-about container-fluid d-flex align-items-center
             justify-content-center flex-column">
-            <h2 class="heading-secondary display-5 font-weight-bold">
+            <h2 class="heading-secondary font-weight-bold">
                 REACHING EVERY CORNER OF THE PLANET
             </h2>
 
-            <div class="d-flex section-about__content">
-                <div class="section-about__content__text mr-5">
+            <div class="d-sm-flex section-about__content">
+                <div class="section-about__content__text mr-sm-5 text-center">
                     <h5 class="heading-tertiary mb-2">
                         YOU ARE GOING TO FALL IN
                         LOVE WITH BREATHING
@@ -115,7 +115,7 @@ MAKING LIFE POSSIBLE
                     </a>
                 </div>
 
-                <div class="composition ml-5">
+                <div class="composition ml-sm-5">
                     <img src="images/nat-9.jpg" alt="Photo 1" class="composition__image composition__image--p1">
 
                     <img src="images/nat-6.jpg" alt="Photo 2" class="composition__image composition__image--p2">
@@ -127,7 +127,7 @@ MAKING LIFE POSSIBLE
         <!-- ===============FEATURES SECTION================ -->
         <section class="section-features container-fluid d-flex
             align-items-center justify-content-around">
-            <div class="section-features__container d-flex align-items-around
+            <div class="section-features__container d-sm-flex align-items-around
                 justify-content-around">
                 <div class="feature-box p-4 text-center rounded">
                     <i class="feature-box__icon icon-basic-globe"></i>
@@ -180,15 +180,15 @@ MAKING LIFE POSSIBLE
         </section>
         <!-- ===============TOURS SECTION================ -->
         <section id="section-tours" class="section-tours container-fluid d-flex align-items-center
-            justify-content-center flex-column">
+            justify-content-center flex-column px-0">
             <h2 class="heading-secondary display-5 font-weight-bold">
                 MOST
                 POPULAR PACKAGES
             </h2>
 
-            <div class="section-tours__cards-container d-flex justify-content-between">
+            <div class="section-tours__cards-container d-sm-flex justify-content-between">
                 <!-- FIRST CARD -->
-                <div class="card border-0">
+                <div class="card border-0 mb-5 mb-sm-0">
                     <div class="card__side card__side--front  rounded">
                         <div class="card__picture card__picture--1"></div>
 
@@ -222,7 +222,7 @@ MAKING LIFE POSSIBLE
                     </div>
                 </div>
                 <!-- SECOND CARD -->
-                <div class="card border-0">
+                <div class="card border-0 mb-5 mb-sm-0">
                     <div class="card__side card__side--front  rounded">
                         <div class="card__picture card__picture--2"></div>
 
@@ -256,7 +256,7 @@ MAKING LIFE POSSIBLE
                     </div>
                 </div>
                 <!-- THIRD CARD -->
-                <div class="card border-0">
+                <div class="card border-0 mb-5 mb-sm-0">
                     <div class="card__side card__side--front  rounded">
                         <div class="card__picture card__picture--3"></div>
 
@@ -292,7 +292,7 @@ MAKING LIFE POSSIBLE
             </div>
 
             <a class="btn btn--shadow btn--round-animate btn--round-animate--green
-        btn-lg border-0 py-3 px-5"
+        btn-sm-lg border-0 py-3 px-5"
                 href="#" role="button">DISCOVER ALL PACKAGES</a>
         </section>
         <!-- ===============STORIES SECTION================ -->
@@ -370,7 +370,7 @@ justify-content-center flex-column">
                             <label for="email" class="form__label ml-2 mt-2">Email Address</label>
                         </div>
 
-                        <div class="form__group d-flex justify-content-between">
+                        <div class="form__group d-flex justify-content-between flex-column flex-sm-row">
                             <div class="form__radio-group">
                                 <input type="radio" class="form__radio-input" id="small" name="size"></input>
 
@@ -380,7 +380,7 @@ justify-content-center flex-column">
                                 </label>
                             </div>
 
-                            <div class="form__radio-group">
+                            <div class="form__radio-group d-flex">
                                 <input type="radio" class="form__radio-input" id="large" name="size"></input>
 
                                 <label for="large" class="form__radio-label">
@@ -391,7 +391,7 @@ justify-content-center flex-column">
                         </div>
 
                         <button class="btn btn--shadow btn--round-animate btn--round-animate--green
-        btn-lg border-0 py-2 px-4">NEXT
+        btn-sm-lg border-0 py-2 px-4">NEXT
                             STEP ▸</button>
                     </form>
                 </div>
@@ -408,8 +408,8 @@ justify-content-center flex-column">
         </section>
     </main>
     <!-- ===============FOOTER SECTION================ -->
-    <footer class="footer p-4 d-flex justify-content-between">
-        <ul class="footer__list d-flex py-2 px-1 justify-content-around">
+    <footer class="footer p-4 d-flex justify-content-sm-between align-items-center flex-column flex-sm-row">
+        <ul class="footer__list d-flex py-2 px-1 justify-content-around flex-wrap">
             <li class="footer__item mx-2">
                 <a href="" class="footer__link">COMPANY</a>
             </li>
