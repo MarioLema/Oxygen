@@ -36,13 +36,13 @@
         <div class="navigation__background"></div>
         <nav class="navigation__nav d-flex align-items-center justify-content-center">
             <ul class="navigation__list">
-                <li class="navigation__item my-4"><a href="#about-section" class="navigation__link px-4 py-3"><span>01</span>about
+                <li class="navigation__item my-4"><a href="#about-section" class="navigation__link js-navigation__link px-4 py-3"><span>01</span>about
                         Fresh Air</a></li>
-                <li class="navigation__item my-4"><a href="#features-section" class="navigation__link px-4 py-3"><span>02</span>Features</a></li>
-                <li class="navigation__item my-4"><a href="#tours-section" class="navigation__link px-4 py-3"><span>03</span>Our
+                <li class="navigation__item my-4"><a href="#features-section" class="navigation__link js-navigation__link px-4 py-3"><span>02</span>Features</a></li>
+                <li class="navigation__item my-4"><a href="#tours-section" class="navigation__link js-navigation__link px-4 py-3"><span>03</span>Our
                         Rates</a></li>
-                <li class="navigation__item my-4"><a href="#stories-section" class="navigation__link px-4 py-3"><span>04</span>Stories</a></li>
-                <li class="navigation__item my-4"><a href="#book-section" class="navigation__link px-4 py-3"><span>05</span>Book
+                <li class="navigation__item my-4"><a href="#stories-section" class="navigation__link js-navigation__link px-4 py-3"><span>04</span>Stories</a></li>
+                <li class="navigation__item my-4"><a href="#book-section" class="navigation__link js-navigation__link px-4 py-3"><span>05</span>Book
                         now</a></li>
             </ul>
         </nav>
@@ -440,7 +440,7 @@ justify-content-center flex-column">
         function hideMenu() {
             document.querySelector("#nav-toggle").checked = false;
         }
-        let items = document.querySelectorAll(".navigation__link");
+        let items = document.querySelectorAll(".js-navigation__link");
         items.forEach(x => x.addEventListener("click", hideMenu));
     </script>
 </body>
