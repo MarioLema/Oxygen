@@ -22,13 +22,16 @@
     font-size: 1.1rem;
   }
 
-  &:hover {
-    color: $color-white !important;
-    background: $color-primary;
-    border-radius: 5px;
-    box-shadow: 0 5px 10px rgba($color-black, 0.2);
-    transform: translateY(-2px);
+  @include hover {
+    &:hover {
+      color: $color-white !important;
+      background: $color-primary;
+      border-radius: 5px;
+      box-shadow: 0 5px 10px rgba($color-black, 0.2);
+      transform: translateY(-2px);
+    }
   }
+
 
   &:active {
     transform: translateY(0px);
@@ -61,10 +64,13 @@
     transition: all 400ms;
   }
 
-  &:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0;
+  @include hover {
+    &:hover::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
   }
+
 }
 
 //===============WHITE BTN================
@@ -82,9 +88,12 @@
   color: $color-white;
   background-color: $color-primary;
 
-  &:hover {
-    color: $color-white !important;
+  @include hover {
+    &:hover {
+      color: $color-white !important;
+    }
   }
+
 
   &::after {
     color: $color-white;

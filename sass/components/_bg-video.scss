@@ -20,11 +20,7 @@
 
 
 	@supports (object-fit: cover) or (-o-object-fit:cover) {
-		& {
-			object-fit: cover;
-			display: inherit;
-		}
+		object-fit: cover;
+		display: inherit;
 	}
-
-	;
 }

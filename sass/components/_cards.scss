@@ -10,8 +10,7 @@
 
 
 
-
-    @media(hover: hover) {
+    @include hover {
         @supports (backface-visibility: hidden) or (-webkit-backface-visibility: hidden) {
             & {
                 height: 40rem;
@@ -62,7 +61,7 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
     overflow: hidden;
 
-    @media (hover: hover) {
+    @include hover {
         @supports (backface-visibility: hidden) or (-webkit-backface-visibility: hidden) {
             & {
                 height: 40rem;
@@ -84,7 +83,7 @@
     padding: 1rem;
     margin-top: 2rem;
 
-    @media (hover: hover) {
+    @include hover {
         @supports (backface-visibility: hidden) or (-webkit-backface-visibility: hidden) {
             & {
                 transform: rotateY(180deg);

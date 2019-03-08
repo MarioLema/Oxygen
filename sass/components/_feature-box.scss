@@ -5,8 +5,11 @@
   max-width: 300px;
   margin: 2rem auto;
 
-  &:hover {
-    transform: translateY(-1rem) scale(1.03);
+  @include hover{
+    &:hover {
+      transform: translateY(-1rem) scale(1.03);
+    }
+  
   }
 
   @include responsive(giant) {

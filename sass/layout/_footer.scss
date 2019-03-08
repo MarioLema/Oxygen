@@ -39,10 +39,14 @@
         text-decoration: none;
     }
 
-    &:hover,
-    &:active {
-        color: $color-primary !important;
+    @include hover {
+
+        &:hover,
+        &:active {
+            color: $color-primary !important;
+        }
     }
+
 }
 
 .footer__copyright {
@@ -50,9 +54,6 @@
     text-align: center;
 
     @include responsive(small) {
-        & {
-            width: calc(50% - 3rem);
-            ;
-        }
+        width: calc(50% - 3rem);
     }
 }

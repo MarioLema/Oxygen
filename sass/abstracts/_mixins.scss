@@ -21,3 +21,8 @@
         @media screen and (min-width: 75rem){ @content };
     }
 }
+
+// HOVER SUPPORT
+@mixin hover{
+    @media (hover: hover) { @content};
+}

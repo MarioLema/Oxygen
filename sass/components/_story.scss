@@ -5,18 +5,21 @@
     padding: 2rem;
     margin-bottom: 5rem;
 
-    &:hover &__caption {
-        //.story:hover .story__caption
-        opacity: 1;
-        transform: translate(-50%, -50%);
+    @include hover{
+        &:hover &__caption {
+            //.story:hover .story__caption
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+    
+        &:hover &__img {
+            //.story:hover .story__img
+            filter: blur(2px) brightness(80%);
+            transform: translateX(-2.5rem) scale(1);
+    
+        }
     }
 
-    &:hover &__img {
-        //.story:hover .story__img
-        filter: blur(2px) brightness(80%);
-        transform: translateX(-2.5rem) scale(1);
-
-    }
 
     @include responsive(medium) {
         & {

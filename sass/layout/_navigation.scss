@@ -130,7 +130,7 @@
             }
         }
     }
-
+@include hover {
     &:hover,
     &:active {
         background-position: 100%;
@@ -138,6 +138,8 @@
         text-decoration: none;
         transform: translateX(0.5rem);
     }
+}
+
 }
 
 .navigation__link span {
